@@ -1,0 +1,32 @@
+/* style.css */
+
+#sentiment-prompt-button {
+  position: fixed;
+  bottom: 20px; /* Slightly adjust position */
+  right: 20px; /* Slightly adjust position */
+  z-index: 9999;
+  
+  /* Semi-transparent background with blur */
+  background-color: rgba(30, 30, 30, 0.7); /* Darker, semi-transparent */
+  backdrop-filter: blur(8px); /* The magic blur effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
+  
+  color: white; /* Text color */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Thin, semi-transparent white border */
+  border-radius: 12px; /* More rounded corners */
+  padding: 8px 15px; /* Smaller padding for a smaller button */
+  
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px; /* Smaller font size */
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
+  transition: all 0.2s ease-in-out; /* Smooth transitions for hover effects */
+}
+
+#sentiment-prompt-button:hover {
+  background-color: rgba(40, 40, 40, 0.8); /* Slightly less transparent on hover */
+  border-color: rgba(255, 255, 255, 0.5); /* Border slightly more opaque on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
+}

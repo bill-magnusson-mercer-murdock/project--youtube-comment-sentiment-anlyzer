@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Comment Sentiment Analyzer",
+  "version": "0.5",
+  "description": "Analyzes YouTube comments and created with love ❤.",
+  "permissions": [
+    "activeTab", 
+    "scripting", 
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/*", 
+    "http://127.0.0.1:5000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch?v=*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
